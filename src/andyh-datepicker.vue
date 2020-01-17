@@ -239,11 +239,15 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
 .andyh-datepicker-container {
   display: grid;
   border: 1px solid #dee2e6;
   grid-template-columns: auto auto auto auto auto auto auto;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .date-title {
@@ -284,7 +288,7 @@ export default {
 }
 
 .selected {
-  background-color: #ffc107;
+  background-color: #f27405;
 }
 
 .disabled {
