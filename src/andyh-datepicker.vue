@@ -54,7 +54,7 @@
 <script>
 export default {
   props: {
-    date: {
+    value: {
       required: true,
       type: Date,
       default: new Date()
@@ -62,7 +62,7 @@ export default {
   },
   data() {
     return {
-      selectedDate: this.date,
+      selectedDate: this.value,
       months: [
         "January",
         "February",
@@ -229,7 +229,7 @@ export default {
   },
   watch: {
     selectedDate: function() {
-      this.$emit("change-date", this.selectedDate);
+      this.$emit("input", this.selectedDate);
     },
     selectedMonthYear: function() {
       this.calculateMonth();
