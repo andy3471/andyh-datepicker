@@ -10,7 +10,7 @@
         "./sfc": "/src/andyh-datepicker.vue"
     },
     "scripts": {
-        "serve": "vue serve --open src/andyh-datepicker",
+        "serve": "vue serve --open src/andyh-datepicker.vue",
         "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
         "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/andyh-datepicker.umd.js",
         "build:es": "rollup --config build/rollup.config.js --format es --file dist/andyh-datepicker.esm.js",
