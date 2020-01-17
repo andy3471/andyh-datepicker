@@ -5,7 +5,7 @@ import component from "./andyh-datepicker.vue";
 export function install(Vue) {
     if (install.installed) return;
     install.installed = true;
-    Vue.component("AndyHDateicker", component);
+    Vue.component("andyh-datepicker", component);
 }
 
 // Create module definition for Vue.use()
