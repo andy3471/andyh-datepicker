@@ -1,7 +1,8 @@
 {
     "name": "andyh-datepicker",
     "version": "1.0.0",
-    "description": "dist/andyh-datepicker",
+    "description": "Simple Vue JS Date Picker App",
+    "Author": "AndyH",
     "main": "dist/andyh-datepicker.umd.js",
     "module": "dist/andyh-datepicker.esm.js",
     "unpkg": "dist/andyh-datepicker.min.js",
@@ -9,10 +10,12 @@
         "./sfc": "/src/andyh-datepicker.vue"
     },
     "scripts": {
+        "serve": "vue serve --open src/andyh-datepicker",
         "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
         "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/andyh-datepicker.umd.js",
         "build:es": "rollup --config build/rollup.config.js --format es --file dist/andyh-datepicker.esm.js",
-        "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/andyh-datepicker.min.js"
+        "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/andyh-datepicker.min.js",
+        "prepublish": "npm run build"
     },
     "repository": {
         "type": "git",
@@ -25,8 +28,13 @@
     },
     "homepage": "https://github.com/andy3471/simple-vuejs-datepicker#readme",
     "devDependencies": {
+        "@vue/cli-service": "^4.1.2",
         "rollup": "^1.29.0",
+        "rollup-plugin-buble": "^0.19.8",
+        "rollup-plugin-commonjs": "^10.1.0",
         "rollup-plugin-vue": "^5.1.5",
+        "sass": "^1.24.5",
+        "sass-loader": "^8.0.2",
         "vue": "^2.6.11",
         "vue-template-compiler": "^2.6.11"
     }
