@@ -278,6 +278,6 @@ export default {
 
 .disabled {
   color: #888888;
-  background-color: white;
+  background-color: white !important;
 }
 </style>
