@@ -4,50 +4,32 @@
       <h4 id="date" class="text-center">{{ this.selectedDateTitle }}</h4>
     </div>
 
-    <div class="button text-center arrow-button" v-on:click="changeYear(-1)">
-      ⟵
-    </div>
+    <div class="ah-btn text-center arrow-button" v-on:click="changeYear(-1)">⟵</div>
     <div class="text-center date-title-small">{{ this.selectedYear }}</div>
-    <div class="button text-center arrow-button" v-on:click="changeYear(1)">
-      ⟶
-    </div>
-    <div class="button text-center arrow-button" v-on:click="changeMonth(-1)">
-      ⟵
-    </div>
+    <div class="ah-btn text-center arrow-button" v-on:click="changeYear(1)">⟶</div>
+    <div class="ah-btn text-center arrow-button" v-on:click="changeMonth(-1)">⟵</div>
     <div class="text-center date-title-small">{{ this.selectedMonthName }}</div>
-    <div class="button text-center arrow-button" v-on:click="changeMonth(+1)">
-      ⟶
-    </div>
+    <div class="ah-btn text-center arrow-button" v-on:click="changeMonth(+1)">⟶</div>
 
     <div
-      class="date button text-center day"
+      class="date ah-btn text-center day"
       v-for="day in daysHeader"
       v-bind:Key="day.day"
       v-on:click="setDate(day.date)"
-    >
-      {{ day.dayName }}
-    </div>
+    >{{ day.dayName }}</div>
     <div
       v-for="(date, index) in datesThisMonth"
       v-bind:key="index"
       v-on:click="changeDate(date.date, date.month)"
-      class="date button text-center"
+      class="date ah-btn text-center"
       v-bind:class="{
         selected: date.date == selectedDay,
         disabled: date.month !== 0
       }"
-    >
-      {{ date.date }}
-    </div>
-    <div class="button text-center arrow-button" v-on:click="setYesterday()">
-      Yesterday
-    </div>
-    <div class="button text-center date-title-small" v-on:click="setToday()">
-      Today
-    </div>
-    <div class="button text-center arrow-button" v-on:click="setTomorrow()">
-      Tomorrow
-    </div>
+    >{{ date.date }}</div>
+    <div class="ah-btn text-center arrow-button" v-on:click="setYesterday()">Yesterday</div>
+    <div class="ah-btn text-center date-title-small" v-on:click="setToday()">Today</div>
+    <div class="ah-btn text-center arrow-button" v-on:click="setTomorrow()">Tomorrow</div>
   </div>
 </template>
 
@@ -239,20 +221,21 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 .andyh-datepicker-container {
   display: grid;
   border: 1px solid #dee2e6;
   grid-template-columns: auto auto auto auto auto auto auto;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  background: white;
 }
 
 .date-title {
   grid-column: 1/8;
   padding: 0.75rem;
+  color: #212529;
 }
 
 .arrow-button {
@@ -260,6 +243,7 @@ export default {
   border-top: 1px solid #dee2e6;
   padding: 0.75rem;
   font-weight: bold;
+  color: #212529;
 }
 
 .date-title-small {
@@ -267,17 +251,18 @@ export default {
   border-top: 1px solid #dee2e6;
   padding: 0.75rem;
   font-weight: bold;
+  color: #212529;
 }
 
 .day {
   font-weight: bold;
 }
 
-.button {
+.ah-btn {
   cursor: pointer;
 }
 
-.button:hover {
+.ah-btn:hover {
   background: #f2f2f2;
 }
 
