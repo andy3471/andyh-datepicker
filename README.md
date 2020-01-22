@@ -2,6 +2,8 @@
 
 This is a simple Date Picker component written in Vue JS.
 
+![ScreenShot](https://raw.github.com/andy3471/andyh-datepicker/master/docs/img/datepicker-default.jpg)
+
 ## Install
 
 Install with NPM with:
