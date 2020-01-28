@@ -276,6 +276,10 @@ export default {
   background-color: #f27405;
 }
 
+.selected:hover {
+  background-color: #f27405;
+}
+
 .disabled {
   color: #888888;
   background-color: white !important;
