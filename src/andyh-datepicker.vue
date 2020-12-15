@@ -1,5 +1,5 @@
 <template>
-  <div class="andyh-datepicker-container">
+  <div class="andyh-datepicker-container" :style="cssVars">
     <div class="date-title">
       <h4 id="date" class="text-center">{{ this.selectedDateTitle }}</h4>
     </div>
@@ -39,7 +39,10 @@ export default {
     value: {
       required: true,
       type: Date,
-      default: new Date()
+      default: new Date(),
+    },
+    color: {
+      default: '#2a438c'
     }
   },
   data() {
@@ -114,6 +117,11 @@ export default {
         this.selectedDate.getMonth(),
         "1"
       ).getDay();
+    },
+    cssVars() {
+      return {
+        '--color': this.color
+      }
     }
   },
   mounted() {
@@ -220,8 +228,18 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+$color: var(--color);
+
+@function set-text-color($color: nth($status, 1)) {
+  @if (lightness($color) > 60) {
+    @return black; // Lighter background, return dark color
+  } @else {
+    @return white; // Darker background, return light color
+  }
+}
 
 .andyh-datepicker-container {
   display: grid;
@@ -268,16 +286,15 @@ export default {
 
 .date {
   border-top: 1px solid #dee2e6;
-  color: #212529;
   padding: 0.75rem;
 }
 
 .selected {
-  background-color: #f27405;
+  background-color: $color;
 }
 
 .selected:hover {
-  background-color: #f27405;
+  background-color: $color;
 }
 
 .disabled {

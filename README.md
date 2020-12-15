@@ -31,3 +31,7 @@ Use the Component with:
 You can use the Date Picker with V-model to your own data
 
     <date-picker v-model="datevalue"></date-picker>
+
+## Setting the accent color
+
+    <date-picker v-model="datevalue" :color="#fec107"></date-picker>
