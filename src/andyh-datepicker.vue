@@ -248,6 +248,7 @@ $color: var(--color);
   text-align: center;
   font-family: "Roboto", sans-serif;
   background: white;
+  color: black
 }
 
 .date-title {

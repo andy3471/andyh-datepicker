@@ -1,6 +1,6 @@
 {
     "name": "andyh-datepicker",
-    "version": "1.0.7",
+    "version": "1.0.9",
     "description": "Simple Vue JS Date Picker App",
     "Author": "AndyH",
     "main": "dist/andyh-datepicker.umd.js",
