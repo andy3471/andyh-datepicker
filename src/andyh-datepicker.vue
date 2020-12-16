@@ -287,6 +287,7 @@ $color: var(--color);
 .date {
   border-top: 1px solid #dee2e6;
   padding: 0.75rem;
+  color: black
 }
 
 .selected {
