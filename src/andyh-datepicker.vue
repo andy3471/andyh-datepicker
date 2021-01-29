@@ -148,6 +148,7 @@ export default {
     },
     changeDate(date, month) {
       var d = new Date();
+      d.setDate(1)
       d.setFullYear(this.selectedDate.getFullYear());
       d.setMonth(this.selectedDate.getMonth() + month);
       d.setDate(date);
